@@ -39,6 +39,16 @@ Rotating the device fixes the screen.
 - Zero-movement inputs (emulator mouse, `input tap`) still work, so the bug is invisible in mouse-driven testing (fact 7).
 - Migrating to edge-to-edge removes the keyboard trigger but not the multi-window trigger (fact 2). The `splitscreen-repro` app demonstrates this.
 
+## Recordings
+
+Scripted repro runs on a Pixel 9 Pro API 33 emulator, stock screens 4.27.0:
+
+- [videos/keyboard-repro.mp4](videos/keyboard-repro.mp4) — keyboard trigger. Baseline
+  presses on Screen B count normally; after the keyboard cycle on Screen C, the plain
+  tap still counts but both jittery taps show the pressed highlight and never count.
+- [videos/splitscreen-repro.mp4](videos/splitscreen-repro.mp4) — split-screen trigger on
+  the fully edge-to-edge app, keyboard never involved. Same outcome.
+
 ## Reproducing
 
 Follow the numbered steps shown inside each app.
